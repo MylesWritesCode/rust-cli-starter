@@ -7,6 +7,9 @@ use clap::{Parser, Subcommand};
 mod commands;
 use commands::example::*;
 
+mod settings;
+use settings::Settings;
+
 #[derive(Parser)]
 #[clap(name = "Starter kit")]
 #[clap(author = "Myles <myles@themapletree.io>")]
@@ -34,6 +37,12 @@ enum Commands {
 
 fn main() {
     let cli = Cli::parse();
+    let settings = Settings::new();
+
+    match settings {
+        Ok(config) => println!("{:?}", config),
+        Err(_) => println!("Error loading settings."),
+    }
 
     match &cli.command {
         Commands::Basic => example_fn(),
