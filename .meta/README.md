@@ -10,27 +10,26 @@
 - project_description
 -->
 
-<!-- [![Contributors][contributors-shield]][contributors-url] -->
-<!-- [![Forks][forks-shield]][forks-url] -->
-<!-- [![Stargazers][stars-shield]][stars-url] -->
-<!-- [![Issues][issues-shield]][issues-url] -->
-<!-- [![MIT License][license-shield]][license-url] -->
-<!-- [![Twitter][twitter-shield]][twitter-url] -->
-<!-- [![LinkedIn][linkedin-shield]][linkedin-url] -->
-
-Check out the other branches to see examples on how I'm using this template.
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![Twitter][twitter-shield]][twitter-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src=".meta/logo.png" alt="Logo">
+    <img src="https://github.com/MylesWritesCode/markdown-templates/blob/master/images/readme-template.png" alt="Logo">
   </a>
 
-<h3 align="center">Rust CLI Starter</h3>
+<h3 align="center">project_title</h3>
 
   <p align="center">
-    <p>Add a short description of your project here.</p>
+    project_description
+    <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
     <br />
@@ -74,9 +73,10 @@ Check out the other branches to see examples on how I'm using this template.
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-This is your basic Rust CLI starter kit. Most of the README isn't going to make
-sense until I figure out exactly what and how I want the project to be built. In
-the meantime, feel free to use this as-is.
+This is a longer product description. No argument here. Good news, everyone!
+There's a report on TV with some very bad news! Oh Leela! You're the only person
+I could turn to; you're the only person who ever loved me. It doesn't look so
+shiny to me.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -90,8 +90,8 @@ the meantime, feel free to use this as-is.
 
 ## Getting Started
 
-Using this template is pretty easy - just take a look at the prerequisites and
-installation steps below.
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
@@ -107,10 +107,10 @@ installation steps below.
 
    ```
    # with https
-   git clone https://github.com/MylesWritesCode/rust-cli-starter.git
+   git clone https://github.com/github_username/repo_name.git
 
    # or ssh
-   git clone git@github.com:MylesWritesCode/rust-cli-starter.git
+   git clone git@github.com:github_username/repo_name.git
    ```
 
 2. Remove the `.git` directory
@@ -229,9 +229,9 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
 [issues-url]: https://github.com/github_username/repo_name/issues
 [license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE
+[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [twitter-shield]: https://img.shields.io/twitter/follow/twitter_handle?style=for-the-badge
 [twitter-url]: https://twitter.com/twitter_handle
-[product-screenshot]: .meta/screenshot.png
+[product-screenshot]: https://github.com/MylesWritesCode/markdown-templates/blob/master/images/readme-template-screenshot.png

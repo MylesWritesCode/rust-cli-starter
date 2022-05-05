@@ -2,7 +2,7 @@
 
 <!-- VARIABLES TO GLOBAL SEARCH + REPLACE
 - rust-cli-starter                           // repo_name
-- Rust CLI Starter                           // project_titl
+- Rust CLI Starter                           // project_title
 - A starter template for a Rust CLI program  // project_description
 - MylesWritesCode                            // github_username
 - MylesCodesEmoji                            // twitter_handle
