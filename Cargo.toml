@@ -5,12 +5,11 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-[dependencies]
-# Deps for the project
-config = { git = "https://github.com/mehcode/config-rs", branch = "master" }
-
-# Required deps for this starter
 [dependencies.clap]
 git = "https://github.com/clap-rs/clap"
 branch = "master"
 features = ["derive"]
+
+[dependencies]
+# Deps for the project
+config = { git = "https://github.com/mehcode/config-rs", branch = "master" }
