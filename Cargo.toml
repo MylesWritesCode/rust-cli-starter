@@ -13,7 +13,7 @@ features = ["derive"]
 [dependencies]
 # Recommended dependencies
 # general 
-# config = { git = "https://github.com/mehcode/config-rs", branch = "master" }
+config = { git = "https://github.com/mehcode/config-rs", branch = "master" }
 # serde = { git = "https://github.com/serde-rs/serde", branch = "master" }
 # tokio = { git = "https://github.com/tokio-rs/tokio", branch = "master" }
 # reqwest = { git = "https://github.com/seanmonstar/reqwest", branch = "master" }

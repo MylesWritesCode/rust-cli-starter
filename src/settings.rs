@@ -12,7 +12,7 @@ pub struct Settings {
 impl Settings {
     pub fn new() -> Result<Config, ConfigError> {
         let config = Config::builder()
-            .add_source(File::with_name("config.toml"))
+            .add_source(File::with_name("config/config.yml"))
             .build()?;
 
         return Ok(config);
