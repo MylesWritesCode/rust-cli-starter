@@ -1,15 +1,30 @@
-use clap::Args;
-
-pub fn example_fn() {
-  let s = "This is from the example command";
-  println!("{}", s);
-}
+use clap::{Args, Subcommand};
 
 #[derive(Args)]
 pub struct ExampleArguments {
-    arg: String,
+    #[clap(subcommand)]
+    command: Option<ExampleCommands>,
+    args: Option<String>,
 }
 
-pub fn example_fn_with_args(args: &ExampleArguments) {
-  println!("{}", args.arg);
+#[derive(Subcommand)]
+pub enum ExampleCommands {
+    Example { arg: String },
+}
+
+pub fn example_command(args: &ExampleArguments) {
+    match &args.command {
+        Some(commands) => match commands {
+            ExampleCommands::Example { arg } => example(arg),
+        },
+        None => default(),
+    }
+}
+
+fn default() {
+    println!("Running the default command from the example module");
+}
+
+fn example(arg: &str) {
+    println!("Running example({})", arg)
 }

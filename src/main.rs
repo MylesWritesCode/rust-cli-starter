@@ -17,22 +17,13 @@ use settings::Settings;
 #[clap(about = "This is a starter kit for creating a CLI application with Rust.")]
 struct Cli {
     #[clap(subcommand)]
-    command: Commands,
+    command: Option<Commands>,
 }
 
-/**
- * These are the subcommands that can be run.
- * @example
- * ```bash
- * $ starter basic
- * $ starter with-args argument
- * ```
- */
 #[derive(Subcommand)]
 enum Commands {
     Basic,
-    // ExampleArguments is defined in the command source file.
-    WithArgs(ExampleArguments),
+    Example(ExampleArguments),
 }
 
 fn main() {
@@ -40,12 +31,23 @@ fn main() {
     let settings = Settings::new();
 
     match settings {
-        Ok(config) => println!("{:?}", config),
-        Err(_) => println!("Error loading settings."),
+        Ok(_) => println!("Sucessfully loaded settings!"),
+        Err(e) => println!("Error loading settings: {:?}", e),
     }
 
     match &cli.command {
-        Commands::Basic => example_fn(),
-        Commands::WithArgs(args) => example_fn_with_args(args),
+        Some(command) => match command {
+            Commands::Basic => basic_command(),
+            Commands::Example(args) => example_command(args),
+        },
+        None => default_command(),
     }
+}
+
+fn default_command() {
+    println!("Running the default command from the top level");
+}
+
+fn basic_command() {
+    println!("Running the basic command from the top level");
 }
