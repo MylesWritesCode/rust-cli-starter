@@ -1,3 +1,4 @@
+# Adds recommended packages below
 [package]
 name = "rust-cli-starter"
 version = "0.1.0"
@@ -6,26 +7,66 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-# Recommended dependencies
-# general 
 config = { git = "https://github.com/mehcode/config-rs", branch = "master" }
-# serde = { git = "https://github.com/serde-rs/serde", branch = "master" }
-# tokio = { git = "https://github.com/tokio-rs/tokio", branch = "master" }
-# reqwest = { git = "https://github.com/seanmonstar/reqwest", branch = "master" }
-# once_cell = { git = "https://github.com/matklad/once_cell", branch = "master" }
 
-# error handling
-# anyhow = { git = "https://github.com/dtolnay/anyhow", branch = "master" }
-# thiserror = { git = "https://github.com/dtolnay/thiserror", branch = "master" }
-# fs_err = { git = "https://github.com/andrewhickman/fs-err", branch = "master", package = "fs-err" }
-
-# diagnostics and testing
-# tracing = { git = "https://github.com/tokio-rs/tracing", branch = "master" }
-# insta = { git = "https://github.com/mitsuhiko/insta", branch = "master" }
-# fake = { git = "https://github.com/cksac/fake-rs", branch = "master" }
-# wiremock = { git = "https://github.com/LukeMathWalker/wiremock-rs", branch = "main" }
 
 [dependencies.clap]
 git = "https://github.com/clap-rs/clap"
 branch = "master"
 features = ["derive"]
+
+# Recommended dependencies. These are recommendations, and can be added with the
+# `cargo add` command.
+# 
+# -----------------------------------------------------[general recommendations]
+# serde 
+# git: https://github.com/serde-rs/serde
+# command: cargo add serde
+# desc: Serialization library for Rust.
+# 
+# tokio = { , branch = "master" }
+# git: https://github.com/tokio-rs/tokio
+# command: cargo add tokio -F full
+# desc: Asynchronous I/O for Rust.
+# 
+# reqwest = { , branch = "master" }
+# git: https://github.com/seanmonstar/reqwest
+# command: cargo add reqwest -F json
+# desc: Asynchronous HTTP client for Rust.
+# 
+# once_cell 
+# git: https://github.com/matklad/once_cell
+# command: cargo add once_cell 
+# desc: A simple, fast, thread-safe, zero-allocation, lazy static cell.
+# 
+# ----------------------------------------------[error handling recommendations]
+# anyhow 
+# git: https://github.com/dtolnay/anyhow
+# command: cargo add anyhow 
+# desc: A lightweight, fast, and ergonomic error type for Rust.
+# 
+# thiserror 
+# git: https://github.com/dtolnay/thiserror
+# command: cargo add thiserror
+# desc: A lightweight, fast, and ergonomic error type for Rust.
+#
+# -------------------------------------[diagnostics and testing recommendations]
+# tracing 
+# git: https://github.com/tokio-rs/tracing
+# command: cargo add tracing
+# desc: Application level tracing for Rust.
+# 
+# insta 
+# git: https://github.com/mitsuhiko/insta
+# command: cargo add insta
+# desc: A snapshot testing library for Rust.
+# 
+# fake 
+# git: https://github.com/cksac/fake-rs
+# command: cargo add fake
+# desc: A library for generating fake data
+# 
+# wiremock 
+# git: https://github.com/LukeMathWalker/wiremock-rs
+# command: cargo add wiremock
+# desc: A library for mocking HTTP requests and responses.
