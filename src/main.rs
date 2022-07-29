@@ -11,7 +11,7 @@ mod settings;
 use settings::Settings;
 
 #[derive(Parser)]
-#[clap(name = "Starter kit")]
+#[clap(name = "Axum starter")]
 #[clap(author = "Myles <myles@themapletree.io>")]
 #[clap(version = "0.1.0")]
 #[clap(about = "This is a starter kit for creating a CLI application with Rust.")]
