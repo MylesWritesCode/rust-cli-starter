@@ -25,10 +25,11 @@ struct Cli {
 enum Commands {
     Basic,
     Example(ExampleArguments),
-    Server(ServerArguments)
+    Server(ServerArguments),
 }
 
-fn main() {
+#[tokio::main]
+async fn main() {
     let cli = Cli::parse();
     let settings = Settings::new();
 
@@ -41,7 +42,7 @@ fn main() {
         Some(command) => match command {
             Commands::Basic => basic_command(),
             Commands::Example(args) => example_command(&args),
-            Commands::Server(args) => server_command(args),
+            Commands::Server(args) => server_command(args).await,
         },
         None => default_command(),
     }
