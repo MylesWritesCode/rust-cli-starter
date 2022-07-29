@@ -9,7 +9,6 @@ edition = "2021"
 [dependencies]
 config = { git = "https://github.com/mehcode/config-rs", branch = "master" }
 
-
 [dependencies.clap]
 git = "https://github.com/clap-rs/clap"
 branch = "master"
@@ -22,44 +21,49 @@ features = ["derive"]
 # serde 
 # git: https://github.com/serde-rs/serde
 # command: cargo add serde
-# desc: Serialization library for Rust.
+# desc: Serialization library for Rust
 # 
 # tokio = { , branch = "master" }
 # git: https://github.com/tokio-rs/tokio
 # command: cargo add tokio -F full
-# desc: Asynchronous I/O for Rust.
+# desc: Asynchronous I/O for Rust
 # 
 # reqwest = { , branch = "master" }
 # git: https://github.com/seanmonstar/reqwest
 # command: cargo add reqwest -F json
-# desc: Asynchronous HTTP client for Rust.
+# desc: Asynchronous HTTP client for Rust
 # 
 # once_cell 
 # git: https://github.com/matklad/once_cell
 # command: cargo add once_cell 
-# desc: A simple, fast, thread-safe, zero-allocation, lazy static cell.
+# desc: A simple, fast, thread-safe, zero-allocation, lazy static cell
 # 
 # ----------------------------------------------[error handling recommendations]
 # anyhow 
 # git: https://github.com/dtolnay/anyhow
 # command: cargo add anyhow 
-# desc: A lightweight, fast, and ergonomic error type for Rust.
+# desc: A lightweight, fast, and ergonomic error type for Rust
 # 
 # thiserror 
 # git: https://github.com/dtolnay/thiserror
 # command: cargo add thiserror
-# desc: A lightweight, fast, and ergonomic error type for Rust.
+# desc: A lightweight, fast, and ergonomic error type for Rust
 #
 # -------------------------------------[diagnostics and testing recommendations]
 # tracing 
 # git: https://github.com/tokio-rs/tracing
 # command: cargo add tracing
-# desc: Application level tracing for Rust.
+# desc: Application level tracing for Rust
 # 
+# tracing-subscriber
+# git: https://github.com/tokio-rs/tracing
+# command: cargo add tracing-subscriber
+# desc: Utilities for implementing tracing subscribers
+#
 # insta 
 # git: https://github.com/mitsuhiko/insta
 # command: cargo add insta
-# desc: A snapshot testing library for Rust.
+# desc: A snapshot testing library for Rust
 # 
 # fake 
 # git: https://github.com/cksac/fake-rs
@@ -69,4 +73,4 @@ features = ["derive"]
 # wiremock 
 # git: https://github.com/LukeMathWalker/wiremock-rs
 # command: cargo add wiremock
-# desc: A library for mocking HTTP requests and responses.
+# desc: A library for mocking HTTP requests and responses

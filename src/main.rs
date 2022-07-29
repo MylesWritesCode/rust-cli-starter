@@ -11,7 +11,7 @@ mod settings;
 use settings::Settings;
 
 #[derive(Parser)]
-#[clap(name = "Starter kit")]
+#[clap(name = "Axum starter")]
 #[clap(author = "Myles <myles@themapletree.io>")]
 #[clap(version = "0.1.0")]
 #[clap(about = "This is a starter kit for creating a CLI application with Rust.")]
@@ -35,10 +35,10 @@ fn main() {
         Err(e) => println!("Error loading settings: {:?}", e),
     }
 
-    match &cli.command {
+    match cli.command {
         Some(command) => match command {
             Commands::Basic => basic_command(),
-            Commands::Example(args) => example_command(args),
+            Commands::Example(args) => example_command(&args),
         },
         None => default_command(),
     }
