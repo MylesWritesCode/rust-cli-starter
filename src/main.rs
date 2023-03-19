@@ -11,18 +11,18 @@ mod settings;
 use settings::Settings;
 
 #[derive(Parser)]
-#[clap(name = "Axum starter")]
-#[clap(author = "Myles <myles@themapletree.io>")]
-#[clap(version = "0.1.0")]
-#[clap(about = "This is a starter kit for creating a CLI application with Rust.")]
+#[command(version, about, long_about = None)]
+#[command(author = "Myles <myles@themapletree.io>")]
 struct Cli {
-    #[clap(subcommand)]
+    #[command(subcommand)]
     command: Option<Commands>,
 }
 
 #[derive(Subcommand)]
 enum Commands {
+    /// Basic command that does things and stuff
     Basic,
+    /// Comments in this position will show in the help text
     Example(ExampleArguments),
 }
 
@@ -35,7 +35,7 @@ fn main() {
         Err(e) => println!("Error loading settings: {:?}", e),
     }
 
-    match cli.command {
+    match &cli.command {
         Some(command) => match command {
             Commands::Basic => basic_command(),
             Commands::Example(args) => example_command(&args),

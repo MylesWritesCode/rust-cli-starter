@@ -2,13 +2,14 @@ use clap::{Args, Subcommand};
 
 #[derive(Args)]
 pub struct ExampleArguments {
-    #[clap(subcommand)]
+    #[command(subcommand)]
     command: Option<ExampleCommands>,
     args: Option<String>,
 }
 
 #[derive(Subcommand)]
 pub enum ExampleCommands {
+    /// This will show when calling help on the subcommands (e.g. cargo run -- example help)
     Example { arg: String },
 }
 

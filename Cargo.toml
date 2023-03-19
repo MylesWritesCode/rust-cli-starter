@@ -2,6 +2,7 @@
 [package]
 name = "rust-cli-starter"
 version = "0.1.0"
+description = "A starter for a CLI app using Clap's derive features."
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -12,7 +13,7 @@ config = { git = "https://github.com/mehcode/config-rs", branch = "master" }
 [dependencies.clap]
 git = "https://github.com/clap-rs/clap"
 branch = "master"
-features = ["derive"]
+features = ["derive", "cargo"]
 
 # Recommended dependencies. These are recommendations, and can be added with the
 # `cargo add` command.
