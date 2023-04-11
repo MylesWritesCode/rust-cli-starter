@@ -13,7 +13,7 @@ pub enum ExampleCommands {
     Example { arg: String },
 }
 
-pub fn example_command(args: &ExampleArguments) {
+pub fn example_command(args: &ExampleArguments) -> color_eyre::Result<()> {
     match &args.command {
         Some(commands) => match commands {
             ExampleCommands::Example { arg } => example(arg),
@@ -22,10 +22,12 @@ pub fn example_command(args: &ExampleArguments) {
     }
 }
 
-fn default() {
+fn default() -> color_eyre::Result<()> {
     println!("Running the default command from the example module");
+    Ok(())
 }
 
-fn example(arg: &str) {
-    println!("Running example({})", arg)
+fn example(arg: &str) -> color_eyre::Result<()> {
+    println!("Running example({})", arg);
+    Ok(())
 }

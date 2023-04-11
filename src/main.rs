@@ -7,9 +7,6 @@ use clap::{Parser, Subcommand};
 mod commands;
 use commands::example::*;
 
-mod settings;
-use settings::Settings;
-
 #[derive(Parser)]
 #[command(version, about, long_about = None)]
 #[command(author = "Myles <myles@themapletree.io>")]
@@ -26,14 +23,8 @@ enum Commands {
     Example(ExampleArguments),
 }
 
-fn main() {
+fn main() -> color_eyre::Result<()> {
     let cli = Cli::parse();
-    let settings = Settings::new();
-
-    match settings {
-        Ok(_) => println!("Sucessfully loaded settings!"),
-        Err(e) => println!("Error loading settings: {:?}", e),
-    }
 
     match &cli.command {
         Some(command) => match command {
@@ -44,10 +35,12 @@ fn main() {
     }
 }
 
-fn default_command() {
+fn default_command() -> color_eyre::Result<()> {
     println!("Running the default command from the top level");
+    Ok(())
 }
 
-fn basic_command() {
+fn basic_command() -> color_eyre::Result<()> {
     println!("Running the basic command from the top level");
+    Ok(())
 }
