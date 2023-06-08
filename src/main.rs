@@ -16,6 +16,7 @@ struct Cli {
 }
 
 #[derive(Subcommand)]
+#[command(arg_required_else_help = true)]
 enum Commands {
     /// Basic command that does things and stuff
     Basic,
