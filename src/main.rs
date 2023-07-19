@@ -28,7 +28,7 @@ fn main() -> color_eyre::Result<()> {
     let cli = Cli::parse();
 
     match &cli.command {
-        Some(cmd) => match cmd {
+        Some(cmds) => match cmds {
             Commands::Basic => basic_command(),
             Commands::Example(args) => example::command(&args),
         },
