@@ -1,1 +1,1 @@
-pub mod example;
+pub(crate) mod example;
