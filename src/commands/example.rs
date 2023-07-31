@@ -15,17 +15,12 @@ pub(crate) enum ExampleCommands {
 }
 
 pub(crate) fn command(args: &ExampleArguments) -> color_eyre::Result<()> {
-    match &args.command {
-        Some(cmds) => match cmds {
+    if let Some(cmds) = &args.command {
+        match cmds {
             ExampleCommands::Example { arg } => example(arg),
-        },
-        None => default(),
-    }
-}
+        }?;
+    };
 
-fn default() -> color_eyre::Result<()> {
-    // NOTE This should never run, because of `$[command(arg_required_else_help = true)]`
-    println!("Running the default command from the example module");
     Ok(())
 }
 

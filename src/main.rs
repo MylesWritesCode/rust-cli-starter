@@ -5,7 +5,7 @@
 use clap::{Parser, Subcommand};
 
 mod commands;
-use commands::{example};
+use commands::example;
 
 #[derive(Parser)]
 #[command(version, about, long_about = None)]
@@ -25,19 +25,16 @@ enum Commands {
 }
 
 fn main() -> color_eyre::Result<()> {
+    color_eyre::install()?;
     let cli = Cli::parse();
 
-    match &cli.command {
-        Some(cmds) => match cmds {
+    if let Some(cmds) = &cli.command {
+        match cmds {
             Commands::Basic => basic_command(),
             Commands::Example(args) => example::command(&args),
-        },
-        None => default_command(),
-    }
-}
+        }?;
+    };
 
-fn default_command() -> color_eyre::Result<()> {
-    println!("Running the default command from the top level");
     Ok(())
 }
 
