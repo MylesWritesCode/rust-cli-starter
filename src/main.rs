@@ -21,7 +21,7 @@ enum Commands {
     /// Basic command that does things and stuff
     Basic,
     /// Comments in this position will show in the help text
-    Example(example::ExampleArguments),
+    Example(example::Arguments),
 }
 
 fn main() -> color_eyre::Result<()> {
