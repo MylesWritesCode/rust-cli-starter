@@ -5,11 +5,15 @@
 use clap::{Parser, Subcommand};
 
 mod commands;
-use commands::example;
+use commands::server;
+
+type Result<T> = color_eyre::Result<T>;
 
 #[derive(Parser)]
-#[command(version, about, long_about = None)]
-#[command(author = "Myles <myles@themapletree.io>")]
+#[clap(name = "axum starter")]
+#[clap(author = "Myles <myles@themapletree.io>")]
+#[clap(version = "0.1.0")]
+#[clap(about = "Purpose built to start a new project with axum")]
 struct Cli {
     #[command(subcommand)]
     command: Option<Commands>,
@@ -20,25 +24,24 @@ struct Cli {
 enum Commands {
     /// Basic command that does things and stuff
     Basic,
-    /// Comments in this position will show in the help text
-    Example(example::Arguments),
+    Server(server::Arguments)
 }
 
-fn main() -> color_eyre::Result<()> {
+fn main() -> crate::Result<()> {
     color_eyre::install()?;
     let cli = Cli::parse();
-
+    
     if let Some(cmds) = &cli.command {
         match cmds {
             Commands::Basic => basic_command(),
-            Commands::Example(args) => example::command(&args),
+            Commands::Server(args) => server::run(args),
         }?;
     };
 
     Ok(())
 }
 
-fn basic_command() -> color_eyre::Result<()> {
+fn basic_command() -> crate::Result<()> {
     println!("Running the basic command from the top level");
     Ok(())
 }
