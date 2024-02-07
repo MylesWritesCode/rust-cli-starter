@@ -1,3 +1,6 @@
+use std::net::SocketAddr;
+
+use axum::Router;
 use clap::{Args, Subcommand};
 
 #[derive(Args)]
@@ -20,7 +23,7 @@ pub(crate) fn run(args: &Arguments) -> crate::Result<()> {
         Some(commands) => match commands {
             Commands::Start { host, port } => start(host.clone(), *port),
         },
-        None => start(None, None),
+        None => start(None, None).await,
     }
 }
 
