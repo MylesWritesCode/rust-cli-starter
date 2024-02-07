@@ -27,14 +27,15 @@ enum Commands {
     Server(server::Arguments)
 }
 
-fn main() -> crate::Result<()> {
+#[tokio::main]
+async fn main() -> crate::Result<()> {
     color_eyre::install()?;
     let cli = Cli::parse();
     
     if let Some(cmds) = &cli.command {
         match cmds {
             Commands::Basic => basic_command(),
-            Commands::Server(args) => server::run(args),
+            Commands::Server(args) => server::run(args).await,
         }?;
     };
 
