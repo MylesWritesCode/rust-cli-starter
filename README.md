@@ -73,6 +73,18 @@ This is your basic Rust CLI starter kit. Most of the README isn't going to make
 sense until I figure out exactly what and how I want the project to be built. In
 the meantime, feel free to use this as-is.
 
+### Scaffolding
+
+This project includes it's own scaffolding command which won't show in
+production builds. To scaffold a new command, you can run the following:
+
+```sh
+cargo run -- scaffold <NAME>
+```
+
+This will create a new command for you, so you don't have to spend time copying
+and pasting the example around.
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Built With
@@ -149,9 +161,9 @@ installation steps below.
 
 ## Usage
 
-This repo is meant to be used as a template for Rust CLI programs. Metadata 
+This repo is meant to be used as a template for Rust CLI programs. Metadata
 files will be within the `.meta` folder. In there, you'll find places to put
-your project logo and screenshot. Importantly, you'll find a fresh README.md 
+your project logo and screenshot. Importantly, you'll find a fresh README.md
 that you can use to overwrite this one.
 
 Happy hacking!
