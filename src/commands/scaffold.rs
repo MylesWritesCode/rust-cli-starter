@@ -1,4 +1,3 @@
-#[cfg(debug_assertions)]
 /// Meta scaffolding file for creating new commands
 /// @note This command will not show in release builds and is only meant to help
 ///       create new commands in development.
