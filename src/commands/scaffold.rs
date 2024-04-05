@@ -69,7 +69,6 @@ pub(crate) fn run(args: &Arguments) -> crate::Result<()> {
     let commands_file_path = dir.join(COMMANDS_FOLDER).join("../commands.rs");
     let mut file = std::fs::OpenOptions::new()
         .read(true)
-        .write(true)
         .append(true)
         .open(commands_file_path)?;
 
@@ -97,7 +96,6 @@ pub(crate) fn run(args: &Arguments) -> crate::Result<()> {
     let output_file_path = dir.join("src/main.rs.tmp");
     let output_file = std::fs::OpenOptions::new()
         .write(true)
-        .create(true)
         .open(&output_file_path)?;
     let mut writer = std::io::BufWriter::new(output_file);
 
