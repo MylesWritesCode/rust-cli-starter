@@ -9,10 +9,10 @@ use commands::*;
 type Result<T> = color_eyre::Result<T>;
 
 #[derive(clap::Parser)]
-#[clap(name = "Rust CLI Starter")]
+#[clap(name = "API starter")]
 #[clap(author = "Myles <myles@themapletree.io>")]
 #[clap(version = "0.1.0")]
-#[clap(about = "A simple rust CLI starter with a scaffolding tool")]
+#[clap(about = "A starter project for building APIs with Axum and Rust")]
 struct Cli {
     #[command(subcommand)]
     command: Option<Commands>,
@@ -28,8 +28,7 @@ convenience during development.";
 #[command(arg_required_else_help = true)]
 enum Commands {
     /// Basic command that does things and stuff
-    Basic,
-    Example(example::Arguments),
+    Server(server::Arguments),
     #[cfg(debug_assertions)]
     #[clap(arg_required_else_help = true)]
     #[clap(about = "Scaffolding command for quickly generating new files in your project")]
@@ -37,23 +36,18 @@ enum Commands {
     Scaffold(scaffold::Arguments),
 }
 
-fn main() -> crate::Result<()> {
+#[tokio::main]
+async fn main() -> crate::Result<()> {
     color_eyre::install()?;
     let cli = Cli::parse();
 
     if let Some(cmds) = &cli.command {
         match cmds {
-            Commands::Basic => basic_command(),
-            Commands::Example(args) => example::run(args),
+            Commands::Server(args) => server::run(args).await,
             #[cfg(debug_assertions)]
             Commands::Scaffold(args) => scaffold::run(args),
         }?;
     };
 
-    Ok(())
-}
-
-fn basic_command() -> crate::Result<()> {
-    println!("Running the basic command from the top level");
     Ok(())
 }
