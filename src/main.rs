@@ -18,6 +18,12 @@ struct Cli {
     command: Option<Commands>,
 }
 
+const SCAFFOLD_ABOUT: &str = "
+Scaffolding command for quickly generating new files in your project
+
+This command will not show up in release builds and is only here for your 
+convenience during development.";
+
 #[derive(clap::Subcommand)]
 #[command(arg_required_else_help = true)]
 enum Commands {
@@ -25,16 +31,9 @@ enum Commands {
     Basic,
     Example(example::Arguments),
     #[cfg(debug_assertions)]
-    #[clap(
-        about = "Meta scaffolding command for creating new commands",
-        long_about = "
-Meta scaffolding command for creating new commands
-
-This command WILL NOT show in release builds and is only meant to be used when
-developing your CLI application. The command will create a new command file in
-the commands directory, update the commands.rs file to include the new command,
-and make modifications to main.rs for you to start working with the command."
-    )]
+    #[clap(arg_required_else_help = true)]
+    #[clap(about = "Scaffolding command for quickly generating new files in your project")]
+    #[clap(long_about = SCAFFOLD_ABOUT)]
     Scaffold(scaffold::Arguments),
 }
 

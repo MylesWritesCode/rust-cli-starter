@@ -10,9 +10,25 @@ const TEMPLATES_FOLDER: &str = ".meta/templates";
 const COMMANDS_FOLDER: &str = "src/commands";
 
 #[derive(clap::Args)]
+#[command(arg_required_else_help = true)]
 pub(crate) struct Arguments {
-    /// The name of the command to be created
-    name: String,
+    #[clap(subcommand)]
+    command: Option<Commands>,
+}
+
+const COMMAND_ABOUT: &str = "
+Meta scaffolding command for creating new commands
+
+The command will create a new command file in the commands directory, update 
+the commands.rs file to include the new command, and make modifications to 
+main.rs for you to start working with the command.";
+
+#[derive(clap::Subcommand)]
+pub(crate) enum Commands {
+    #[clap(arg_required_else_help = true)]
+    #[clap(about = "Meta scaffolding command for creating new commands")]
+    #[clap(long_about = COMMAND_ABOUT)]
+    Command { name: String },
 }
 
 #[derive(thiserror::Error, Debug)]
@@ -24,8 +40,17 @@ enum ScaffoldErrors {
 }
 
 pub(crate) fn run(args: &Arguments) -> crate::Result<()> {
-    let name = args
-        .name
+    if let Some(command) = &args.command {
+        match command {
+            Commands::Command { name } => scaffold_command(name),
+        }?;
+    };
+
+    Ok(())
+}
+
+fn scaffold_command(name: &str) -> crate::Result<()> {
+    let name = name
         .to_lowercase()
         .chars()
         .map(|c| if c.is_alphanumeric() { c } else { '_' })
