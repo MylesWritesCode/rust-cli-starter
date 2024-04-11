@@ -113,13 +113,14 @@ fn scaffold_command(name: &str) -> crate::Result<()> {
     print!("🤞 Writing to main.rs...");
     std::io::stdout().flush()?;
     std::thread::sleep(std::time::Duration::from_millis(500));
-    let main_file_path = dir.join("src/main.rs");
+    let main_file_path = dir.join("src").join("main.rs");
     let main_file = std::fs::File::open(&main_file_path)?;
     let reader = std::io::BufReader::new(main_file);
 
-    let output_file_path = dir.join("src/main.rs.tmp");
+    let output_file_path = dir.join("src").join("main.rs.tmp");
     let output_file = std::fs::OpenOptions::new()
         .write(true)
+        .create(true)
         .open(&output_file_path)?;
     let mut writer = std::io::BufWriter::new(output_file);
 
