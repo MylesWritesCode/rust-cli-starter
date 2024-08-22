@@ -193,8 +193,12 @@ See the [open issues](https://github.com/MylesWritesCode/rust-cli-starter/issues
 
 ## Contributing
 
-<a href="https://github.com/MylesWritesCode/rust-cli-starter/graphs/contributors" target="_blank">
-<img alt="Contributors" src="https://img.shields.io/github/contributors/MylesWritesCode/rust-cli-starter.svg?style=for-the-badge" />
+<a
+  href="https://github.com/MylesWritesCode/rust-cli-starter/graphs/contributors"
+  target="_blank">
+<img
+    alt="Contributors"
+    src="https://img.shields.io/github/contributors/MylesWritesCode/rust-cli-starter.svg?style=for-the-badge" />
 </a>
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -214,8 +218,12 @@ Don't forget to give the project a star! Thanks again!
 
 ## License
 
-<a href="https://github.com/MylesWritesCode/rust-cli-starter/blob/master/LICENSE" target="_blank">
-<img alt="License" src="https://img.shields.io/github/license/MylesWritesCode/rust-cli-starter.svg?style=for-the-badge" />
+<a
+  href="https://github.com/MylesWritesCode/rust-cli-starter/blob/master/LICENSE"
+  target="_blank">
+<img
+    alt="License"
+    src="https://img.shields.io/github/license/MylesWritesCode/rust-cli-starter.svg?style=for-the-badge" />
 </a>
 
 Distributed under the MIT License. See `LICENSE` for more information.
@@ -228,14 +236,29 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ### Myles Berueda
 
-<a href="https://linkedin.com/in/myles-berueda" target="_blank">
-<img alt="LinkedIn" src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555" />
+<a
+  href="https://linkedin.com/in/myles-berueda"
+  style="display:inline-block;width:fit-content;"
+  target="_blank">
+<img
+    alt="LinkedIn"
+    src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555" />
 </a>
-<a href="https://mstdn.social/@mylesberueda" target="_blank">
-<img alt="Mastodon Follow" src="https://img.shields.io/mastodon/follow/113004977572109573?domain=https%3A%2F%2Fmstdn.social&style=for-the-badge&label=MSTDN.SOCIAL" />
+<a
+  href="https://mstdn.social/@mylesberueda"
+  style="display:inline-block;width:fit-content;"
+  target="_blank">
+<img
+    alt="Mastodon Follow"
+    src="https://img.shields.io/mastodon/follow/113004977572109573?domain=https%3A%2F%2Fmstdn.social&style=for-the-badge&label=MSTDN.SOCIAL" />
 </a>
-<a href="https://github.com/MylesWritesCode" target="_blank">
-<img alt="Github followers" src="https://img.shields.io/github/followers/MylesWritesCode?style=for-the-badge&label=GITHUB" />
+<a
+  href="https://github.com/MylesWritesCode"
+  style="display:inline-block;width:fit-content;"
+  target="_blank">
+<img
+    alt="Github followers"
+    src="https://img.shields.io/github/followers/MylesWritesCode?style=for-the-badge&label=GITHUB" />
 </a>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
