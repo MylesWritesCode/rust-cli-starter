@@ -131,17 +131,21 @@ installation steps below.
    ```
 
 3. Re-init git
+
    ```
    git init
    ```
+
 4. Create a repo on your preferred git hosting site (e.g. GitHub)
 5. Add your new remote to your local git instance
+
    ```
    git remote add origin <your url>
    git add .
    git commit -m 'init'
    git push origin <your branch>
    ```
+
 6. Start hacking away
 
 ### Simpler, since you're here
@@ -189,7 +193,9 @@ See the [open issues](https://github.com/MylesWritesCode/rust-cli-starter/issues
 
 ## Contributing
 
-[![Contributors][contributors-shield]][contributors-url]
+<a href="https://github.com/MylesWritesCode/rust-cli-starter/graphs/contributors" target="_blank">
+<img alt="Contributors" src="https://img.shields.io/github/contributors/MylesWritesCode/rust-cli-starter.svg?style=for-the-badge" />
+</a>
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -208,9 +214,11 @@ Don't forget to give the project a star! Thanks again!
 
 ## License
 
-[![MIT License][license-shield]][license-url]
+<a href="https://github.com/MylesWritesCode/rust-cli-starter/blob/master/LICENSE" target="_blank">
+<img alt="License" src="https://img.shields.io/github/license/MylesWritesCode/rust-cli-starter.svg?style=for-the-badge" />
+</a>
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See `LICENSE` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -218,11 +226,17 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-**Myles Berueda**
+### Myles Berueda
 
-[![Twitter][twitter-shield]][twitter-url]
-
-[![LinkedIn][linkedin-shield]][linkedin-url]
+<a href="https://linkedin.com/in/myles-berueda" target="_blank">
+<img alt="LinkedIn" src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555" />
+</a>
+<a href="https://mstdn.social/@mylesberueda" target="_blank">
+<img alt="Mastodon Follow" src="https://img.shields.io/mastodon/follow/113004977572109573?domain=https%3A%2F%2Fmstdn.social&style=for-the-badge&label=MSTDN.SOCIAL" />
+</a>
+<a href="https://github.com/MylesWritesCode" target="_blank">
+<img alt="Github followers" src="https://img.shields.io/github/followers/MylesWritesCode?style=for-the-badge&label=GITHUB" />
+</a>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -238,18 +252,4 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/MylesWritesCode/rust-cli-starter.svg?style=for-the-badge
-[contributors-url]: https://github.com/MylesWritesCode/rust-cli-starter/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/MylesWritesCode/rust-cli-starter.svg?style=for-the-badge
-[forks-url]: https://github.com/MylesWritesCode/rust-cli-starter/network/members
-[stars-shield]: https://img.shields.io/github/stars/MylesWritesCode/rust-cli-starter.svg?style=for-the-badge
-[stars-url]: https://github.com/MylesWritesCode/rust-cli-starter/stargazers
-[issues-shield]: https://img.shields.io/github/issues/MylesWritesCode/rust-cli-starter.svg?style=for-the-badge
-[issues-url]: https://github.com/MylesWritesCode/rust-cli-starter/issues
-[license-shield]: https://img.shields.io/github/license/MylesWritesCode/rust-cli-starter.svg?style=for-the-badge
-[license-url]: https://github.com/MylesWritesCode/rust-cli-starter/blob/master/LICENSE
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/myles-berueda
-[twitter-shield]: https://img.shields.io/twitter/follow/MylesCodesEmoji?style=for-the-badge
-[twitter-url]: https://twitter.com/MylesCodesEmoji
 [product-screenshot]: .meta/screenshot.png
