@@ -1,18 +1,4 @@
-<div id="top"></div>
-
-<!-- VARIABLES TO GLOBAL SEARCH + REPLACE
-- rust-cli-starter                           // repo_name
-- Rust CLI Starter                           // project_title
-- A starter template for a Rust CLI program  // project_description
-- MylesWritesCode                            // github_username
-- MylesCodesEmoji                            // twitter_handle
-- myles-berueda                              // linkedin_username
-- me@themapletree.io                         // email
--->
-
-<!-- [![Forks][forks-shield]][forks-url] -->
-<!-- [![Stargazers][stars-shield]][stars-url] -->
-<!-- [![Issues][issues-shield]][issues-url] -->
+<div id="top" />
 
 <!-- PROJECT LOGO -->
 <br />
@@ -26,7 +12,9 @@
   <p align="center">
     A starter template for a Rust CLI program
     <br />
-    <a href="https://github.com/MylesWritesCode/rust-cli-starter"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/MylesWritesCode/rust-cli-starter">
+      <strong>Explore the docs »</strong>
+    </a>
     <br />
     <br />
     <a href="https://github.com/MylesWritesCode/rust-cli-starter">View Demo</a>
@@ -112,39 +100,39 @@ installation steps below.
 
 1. Clone the repo
 
-   ```
-   # with https
-   git clone https://github.com/MylesWritesCode/rust-cli-starter.git
+```
+# with https
+git clone https://github.com/MylesWritesCode/rust-cli-starter.git
 
-   # or ssh
-   git clone git@github.com:MylesWritesCode/rust-cli-starter.git
-   ```
+# or ssh
+git clone git@github.com:MylesWritesCode/rust-cli-starter.git
+```
 
 2. Remove the `.git` directory
 
-   ```
-   # cd into the cloned directory
-   cd rust-cli-starter
+```
+# cd into the cloned directory
+cd rust-cli-starter
 
-   # delete `.git`
-   rm -rf .git
-   ```
+# delete `.git`
+rm -rf .git
+```
 
 3. Re-init git
 
-   ```
-   git init
-   ```
+```
+git init
+```
 
 4. Create a repo on your preferred git hosting site (e.g. GitHub)
 5. Add your new remote to your local git instance
 
-   ```
-   git remote add origin <your url>
-   git add .
-   git commit -m 'init'
-   git push origin <your branch>
-   ```
+```
+git remote add origin <your url>
+git add .
+git commit -m 'init'
+git push origin <your branch>
+```
 
 6. Start hacking away
 
@@ -152,8 +140,7 @@ installation steps below.
 
 > _alternatively, the "I have a Github account" way_
 
-1. [Github docs][github-template-docs] telling you to click the button above,
-   labeled "Use this template".
+1. [Github docs][github-template-docs] telling you to click the button above, labeled "Use this template".
 2. ???
 3. Profit by hacking away after you clone your new repo.
 
@@ -193,13 +180,7 @@ See the [open issues](https://github.com/MylesWritesCode/rust-cli-starter/issues
 
 ## Contributing
 
-<a
-  href="https://github.com/MylesWritesCode/rust-cli-starter/graphs/contributors"
-  target="_blank">
-<img
-    alt="Contributors"
-    src="https://img.shields.io/github/contributors/MylesWritesCode/rust-cli-starter.svg?style=for-the-badge" />
-</a>
+[![Contributors](https://img.shields.io/github/contributors/MylesWritesCode/rust-cli-starter.svg?style=for-the-badge)](https://github.com/MylesWritesCode/rust-cli-starter/graphs/contributors)
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -218,13 +199,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## License
 
-<a
-  href="https://github.com/MylesWritesCode/rust-cli-starter/blob/master/LICENSE"
-  target="_blank">
-<img
-    alt="License"
-    src="https://img.shields.io/github/license/MylesWritesCode/rust-cli-starter.svg?style=for-the-badge" />
-</a>
+[![LICENSE](https://img.shields.io/github/license/MylesWritesCode/rust-cli-starter.svg?style=for-the-badge)](https://github.com/MylesWritesCode/rust-wasm/blob/master/LICENSE)
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
@@ -236,30 +211,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ### Myles Berueda
 
-<a
-  href="https://linkedin.com/in/myles-berueda"
-  style="display:inline-block;width:fit-content;"
-  target="_blank">
-<img
-    alt="LinkedIn"
-    src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555" />
-</a>
-<a
-  href="https://mstdn.social/@mylesberueda"
-  style="display:inline-block;width:fit-content;"
-  target="_blank">
-<img
-    alt="Mastodon Follow"
-    src="https://img.shields.io/mastodon/follow/113004977572109573?domain=https%3A%2F%2Fmstdn.social&style=for-the-badge&label=MSTDN.SOCIAL" />
-</a>
-<a
-  href="https://github.com/MylesWritesCode"
-  style="display:inline-block;width:fit-content;"
-  target="_blank">
-<img
-    alt="Github followers"
-    src="https://img.shields.io/github/followers/MylesWritesCode?style=for-the-badge&label=GITHUB" />
-</a>
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555)](https://linkedin.com/in/myles-berueda)
+[![Mastodon](https://img.shields.io/mastodon/follow/113004977572109573?domain=https%3A%2F%2Fmstdn.social&style=for-the-badge&label=MSTDN.SOCIAL)](https://mstdn.social/@mylesberueda)
+[![Github](https://img.shields.io/github/followers/MylesWritesCode?style=for-the-badge&label=GITHUB)](https://github.com/MylesWritesCode)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
