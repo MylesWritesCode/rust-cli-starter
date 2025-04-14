@@ -1,4 +1,5 @@
-### Rust ###
+# Rust
+# ------------------------------------------------------------------------------
 debug/
 target/
 
@@ -6,17 +7,22 @@ Cargo.lock
 **/*.rs.bk
 *.pdb
 
-### Misc ###
+# Misc 
+# ------------------------------------------------------------------------------
 *.out
-
 # Environment files
 .env*
 !.env.example
+!.env.mock
+# Vectorcode + Chroma
+chroma.log
+chroma_data
 
+# OS-specific files
+# ------------------------------------------------------------------------------
 # MacOS
 .DS_Store
-
 # Windows
 Thumbs.db
-*.ZoneIdentifier
+*ZoneIdentifier
 
